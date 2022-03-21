@@ -1,0 +1,27 @@
+<div id="content_header"></div>
+<div id="site_content">
+  <div>
+      <a href="/create-category/">Создать новую категорию</a>
+  </div>
+  <div>
+      <h1>Список существующих категорий</h1>
+      {% for item in objects_list %}
+      <li>
+          {{item.name}} <span>Количество сувениров: {{item.souvenir_count()}}</span>
+          <a href="/souvenir_list/?id={{item.id}}">Показать сувениры</a>
+      </li>
+      {% endfor %}
+  </div>
+  <div>
+      <li>
+          <a href="/buyer-list/">Список клиентов</a>
+      </li>
+      <li>
+          <a href="/create-buyer/">Создать клиента</a>
+      </li>
+      <li>
+          <a href="/add-buyer/">Добавить сувенир клиенту</a>
+      </li>
+  </div>
+</div>
+

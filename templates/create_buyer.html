@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}
+	simplestyle_banner
+{% endblock %}
+
+{% block menu %}
+	{% include "inc-menu.html" %}
+{% endblock %}
+
+{% block body %}
+<div id="content_header"></div>
+<div id="site_content">
+	<div>
+		<li>
+			<a href="/buyer-list/">Список клиентов</a>
+		</li>
+	</div>
+    <div>
+        <h1>Создание клиента</h1>
+        <form method="post">
+            <input type="text" name="name" placeholder="Имя">
+            <button type="submit">Сохранить</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
+
+{% block footer %}
+	{% include "inc-footer.html" %}
+{% endblock %}

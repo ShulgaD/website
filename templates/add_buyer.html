@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %}
+	simplestyle_banner
+{% endblock %}
+
+{% block menu %}
+	{% include "inc-menu.html" %}
+{% endblock %}
+
+{% block body %}
+<div id="content_header"></div>
+<div id="site_content">
+	<div>
+		<li>
+			<a href="/buyer-list/">Список клиентов</a>
+		</li>
+		<li>
+			<a href="/create-buyer/">Создать клиента</a>
+		</li>
+	</div>
+    <h1>Добавление сувенира клиенту</h1>
+    <form method="post">
+        <select size="3" name="souvenir_name">
+            {% for item in souvenirs %}
+            <option value="{{item.name}}">{{item.name}}</option>
+            {% endfor %}
+        </select>
+        <select size="3" name="buyer_name">
+            {% for item in buyers %}
+            <option value="{{item.name}}">{{item.name}}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Добавить</button>
+    </form>
+</div>
+{% endblock %}
+
+{% block footer %}
+	{% include "inc-footer.html" %}
+{% endblock %}

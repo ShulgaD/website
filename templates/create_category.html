@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}
+	simplestyle_banner
+{% endblock %}
+
+{% block menu %}
+	{% include "inc-menu.html" %}
+{% endblock %}
+
+{% block body %}
+<div id="content_header"></div>
+<div id="site_content">
+<h1>Создание категории</h1>
+<form method="post">
+    <input type="text" name="name" placeholder="Название">
+    <button type="submit">Сохранить и вернуться на главную</button>
+</form>
+</div>
+{% endblock %}
+
+{% block footer %}
+	{% include "inc-footer.html" %}
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}
+	simplestyle_banner
+{% endblock %}
+
+{% block menu %}
+	{% include "inc-menu.html" %}
+{% endblock %}
+
+{% block body %}
+<div id="content_header"></div>
+<div id="site_content">
+    <a href="/">назад</a>
+
+    <h1>Список категорий</h1>
+    <ul>
+
+        {% for item in objects_list %}
+        <li>
+            {{item.name}} <span>Количество сувениров: {{item.souvenir_count()}}</span>
+        </li>
+        {% endfor %}
+    </ul>
+
+	<div>
+		<li><a href="/souvenir_list/">Список сувениров</a></li>
+		<li><a href="/create_souvenir/">Создать сувенир</a></li>
+	</div>
+</div>
+{% endblock %}
+
+{% block footer %}
+	{% include "inc-footer.html" %}
+{% endblock %}
